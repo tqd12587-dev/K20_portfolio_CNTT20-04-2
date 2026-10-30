@@ -1,0 +1,407 @@
+﻿
+/* PORTFOLIO V5 - TRAN VIET ANH
+   Nang cap tu CSS cu theo yeu cau Lab 5
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #1d2733;
+  background: #f4f6f8;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  color: #12457a;
+}
+
+a {
+  color: #12457a;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 0.1875rem solid #e8a33d;
+  outline-offset: 0.1875rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1148px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: #e6edf3;
+}
+
+.site-header {
+  background: #12457a;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 0 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.menu a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.375rem;
+  border-radius: 0.25rem;
+  transition: background-color 180ms ease;
+}
+
+.menu a:hover {
+  background-color: #28639b;
+  text-decoration: underline;
+}
+
+.hero {
+  background: #ffffff;
+  padding: 4.5rem 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-role {
+  color: #4a5a6a;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #12457a;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: #e8a33d;
+  color: #1d2733;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 180ms ease,
+              transform 180ms ease;
+}
+
+.button:hover {
+  background: #f4ba63;
+  color: #1d2733;
+}
+
+.button:active {
+  transform: translateY(0.0625rem);
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.avatar {
+  width: 20rem;
+  height: 20rem;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  gap: 0.5rem 2rem;
+  padding-left: 1.25rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border-top: 0.25rem solid #e8a33d;
+  transition: transform 180ms ease,
+              box-shadow 180ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.card a {
+  overflow-wrap: anywhere;
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+}
+
+.study {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.study th,
+.study td {
+  padding: 0.75rem 1rem;
+  border: 0.0625rem solid #c9d4de;
+  text-align: left;
+}
+
+.study th {
+  background: #12457a;
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  max-width: 37.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 0.0625rem solid #c9d4de;
+  border-radius: 0.5rem;
+}
+
+.contact-form h3 {
+  color: #12457a;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 0.0625rem solid #a9b9c7;
+  border-radius: 0.375rem;
+  font: inherit;
+  background: #ffffff;
+  color: #1d2733;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  border-color: #12457a;
+  outline: 0.1875rem solid #e8a33d;
+  outline-offset: 0.1875rem;
+}
+
+.form-group input:focus:invalid:not(:placeholder-shown),
+.form-group textarea:focus:invalid:not(:placeholder-shown) {
+  border-color: #b34343;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #4a5a6a;
+  font-size: 0.875rem;
+}
+
+.form-note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #4a5a6a;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .hero-inner {
+    gap: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .avatar {
+    width: 16.25rem;
+    height: 16.25rem;
+  }
+
+  .menu {
+    gap: 1.25rem;
+  }
+
+  .study th,
+  .study td {
+    padding: 0.625rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    white-space: normal;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .avatar {
+    width: 13.75rem;
+    height: 13.75rem;
+  }
+
+  .button {
+    padding: 0.625rem 1.375rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  h2 {
+    font-size: 1.625rem;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
