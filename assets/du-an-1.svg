@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#171c25"/>
+  <rect x="40" y="40" width="720" height="370" rx="8" fill="#0f131a" stroke="#667085" stroke-width="4"/>
+  <circle cx="75" cy="75" r="8" fill="#ef4444"/><circle cx="105" cy="75" r="8" fill="#f59e0b"/><circle cx="135" cy="75" r="8" fill="#22c55e"/>
+  <text x="80" y="150" fill="#22c55e" font-family="monospace" font-size="28">$ g++ main.cpp -o app</text>
+  <text x="80" y="210" fill="#e5e7eb" font-family="monospace" font-size="28">Chuong trinh C++ co ban</text>
+  <text x="80" y="270" fill="#60a5fa" font-family="monospace" font-size="28">_</text>
+</svg>
