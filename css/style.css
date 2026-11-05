@@ -1,407 +1,278 @@
 ﻿
-/* PORTFOLIO V5 - TRAN VIET ANH
-   Nang cap tu CSS cu theo yeu cau Lab 5
-*/
-*,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box;      /* Thuộc tính đảm bảo padding + border
+                                  nằm trong width đã khai báo */
 }
 
 body {
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  font-size: 1.0625rem;
+  font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
-  color: #1d2733;
-  background: #f4f6f8;
+  color: #000049;
+  background-color: #f8fafc;
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.25;
-  margin: 0 0 1rem;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-h2 {
-  font-size: 1.875rem;
-  color: #12457a;
-}
-
-a {
-  color: #12457a;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 0.1875rem solid #e8a33d;
-  outline-offset: 0.1875rem;
-}
-
-.container {
-  width: 100%;
-  max-width: 1148px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 4rem 0;
-}
-
-.section-alt {
-  background: #e6edf3;
-}
-
-.site-header {
-  background: #12457a;
+/* --- Navigation --- */
+.nav {
+  background-color: #009949;
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
+.nav__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex ;           
+  justify-content: space-between;     
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
-.logo {
-  color: #ffffff;
-  font-size: 1.375rem;
+.nav__logo {
+  color: #fff;
   font-weight: 700;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
-.menu {
-  display: flex;
-  gap: 0 1rem;
+.nav__menu {
   list-style: none;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.menu a {
-  display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.25rem 0.375rem;
-  border-radius: 0.25rem;
-  transition: background-color 180ms ease;
-}
-
-.menu a:hover {
-  background-color: #28639b;
-  text-decoration: underline;
-}
-
-.hero {
-  background: #ffffff;
-  padding: 4.5rem 0;
-}
-
-.hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero-role {
-  color: #4a5a6a;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  color: #12457a;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  background: #e8a33d;
-  color: #1d2733;
-  font: inherit;
-  font-weight: 700;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: background-color 180ms ease,
-              transform 180ms ease;
-}
-
-.button:hover {
-  background: #f4ba63;
-  color: #1d2733;
-}
-
-.button:active {
-  transform: translateY(0.0625rem);
-}
-
-.img {
-  max-width: 100%;
-  height: auto;
-}
-
-.avatar {
-  width: 20rem;
-  height: 20rem;
-  max-width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
-  gap: 0.5rem 2rem;
-  padding-left: 1.25rem;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  display: flex ;           
   gap: 1.5rem;
 }
 
-.card {
-  background: #ffffff;
-  padding: 1.25rem;
-  border-radius: 0.5rem;
-  border-top: 0.25rem solid #e8a33d;
-  transition: transform 180ms ease,
-              box-shadow 180ms ease;
+.nav__menu a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
 }
 
-.card:hover,
-.card:focus-within {
-  transform: translateY(-0.25rem);
-  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.12);
+.nav__menu a:hover {
+  color: #fff;
 }
 
-.card a {
-  overflow-wrap: anywhere;
+/* --- Hero --- */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 4rem;   /* Khoảng đệm bên trong: trên, trái-phải, dưới */
+  background-color: #009949;
+  color: #fff;
 }
 
-.card img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;          /* Khoảng cách phía dưới tiêu đề */
+}
+
+.hero__name {
+  color: var(--accent);        /* Dùng màu chủ đạo theo MSSV */
+}
+
+.hero__desc {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+/* --- Button --- */
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: 6px;              /* Bo tròn góc nút */
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+/* --- Section chung --- */
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #009949;
+}
+
+/* --- Về tôi (About) --- */
+.about {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.about__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about__text {
+  color: #000049;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about__info {
+  list-style: none;
+  padding: 0;
+}
+
+.about__info li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #000049;
+}
+
+.about__info li strong {
+  color: var(--accent);
+  min-width: 100px;
+  display: inline-block;
+}
+
+/* --- Skills --- */
+.skills {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.skills__grid {
+  display: grid;          /* Bố cục lưới cho 3 thẻ kỹ năng */
+  grid-template-columns: repeat(3, 1fr);  /* 3 cột bằng nhau */
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Đổ bóng nhẹ */
+}
+
+.skill-card__icon {
+  font-size: 2.5rem;
   display: block;
   margin-bottom: 1rem;
 }
 
-.card h3 {
-  font-size: 1.25rem;
+.skill-card h3 {
+  margin-bottom: 0.5rem;
+  color: #009949;
 }
 
-.study {
+.skill-card p {
+  color: #000049;
+  font-size: 0.9rem;
+}
+
+/* --- Projects --- */
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  background-color: #f1f5f9;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Tự động chia cột, tối thiểu 300px,
+                                         tối đa 1fr — dùng repeat + auto-fit + minmax */
+  gap: 1.5rem;
+}
+
+/* --- Card --- */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;           /* Ẩn phần tràn để ảnh bo góc theo card */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card__img {
   width: 100%;
-  border-collapse: collapse;
-  background: #ffffff;
+  height: 200px;
+  object-fit: cover;            /* Ảnh phủ kín khung mà không bị méo */
 }
 
-.study th,
-.study td {
-  padding: 0.75rem 1rem;
-  border: 0.0625rem solid #c9d4de;
-  text-align: left;
+.card__body {
+  padding: 1.25rem;
 }
 
-.study th {
-  background: #12457a;
-  color: #ffffff;
+.card__body h3 {
+  margin-bottom: 0.5rem;
+  color: #009949;
 }
 
-.contact {
-  display: flex;
-  gap: 3rem;
-  list-style: none;
-  padding: 0;
-  flex-wrap: wrap;
+.card__body p {
+  color: #000049;
+  font-size: 0.9rem;
 }
 
-.contact-form {
-  max-width: 37.5rem;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #ffffff;
-  border: 0.0625rem solid #c9d4de;
-  border-radius: 0.5rem;
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #009949;
+  color: #000049;
+  font-size: 0.85rem;
 }
 
-.contact-form h3 {
-  color: #12457a;
-}
 
-.form-group {
-  margin-bottom: 1.25rem;
-}
+/* =============================================
+   PHẦN RESPONSIVE – Media Queries
+   ============================================= */
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.375rem;
-  font-weight: 600;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-  padding: 0.75rem;
-  border: 0.0625rem solid #a9b9c7;
-  border-radius: 0.375rem;
-  font: inherit;
-  background: #ffffff;
-  color: #1d2733;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-.form-group input:focus-visible,
-.form-group textarea:focus-visible {
-  border-color: #12457a;
-  outline: 0.1875rem solid #e8a33d;
-  outline-offset: 0.1875rem;
-}
-
-.form-group input:focus:invalid:not(:placeholder-shown),
-.form-group textarea:focus:invalid:not(:placeholder-shown) {
-  border-color: #b34343;
-}
-
-.form-group small {
-  display: block;
-  margin-top: 0.25rem;
-  color: #4a5a6a;
-  font-size: 0.875rem;
-}
-
-.form-note {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  color: #4a5a6a;
-}
-
-.site-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
+/* ----- Breakpoint 1: Tablet (≤ 768px) ----- */
 @media (max-width: 768px) {
-  .section {
-    padding: 3rem 0;
-  }
 
-  .hero {
-    padding: 3.5rem 0;
-  }
-
-  .hero-inner {
-    gap: 2.5rem;
+  .skills__grid {
+    grid-template-columns: 1fr 1fr;   /* 2 cột trên tablet */
   }
 
   .hero h1 {
-    font-size: 2.75rem;
-  }
-
-  .avatar {
-    width: 16.25rem;
-    height: 16.25rem;
-  }
-
-  .menu {
-    gap: 1.25rem;
-  }
-
-  .study th,
-  .study td {
-    padding: 0.625rem 0.75rem;
+    font-size: 1.75rem;
   }
 }
 
+/* ----- Breakpoint 2: Mobile (≤ 480px) ----- */
 @media (max-width: 480px) {
-  body {
-    font-size: 1rem;
-  }
 
-  .container {
-    padding: 0 1rem;
-  }
-
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu {
-    flex-wrap: wrap;
-    gap: 0.75rem 1.25rem;
-    white-space: normal;
-  }
-
-  .hero-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.25rem;
-  }
-
-  .avatar {
-    width: 13.75rem;
-    height: 13.75rem;
-  }
-
-  .button {
-    padding: 0.625rem 1.375rem;
-  }
-
-  .section {
-    padding: 2.5rem 0;
-  }
-
-  h2 {
-    font-size: 1.625rem;
-  }
-
-  .contact {
-    flex-direction: column;
+  .nav__container {
+    flex-direction: column;         /* Xếp dọc logo và menu trên mobile */
     gap: 0.75rem;
   }
 
-  .contact-form {
-    padding: 1rem;
+  .nav__menu {
+    gap: 1rem;
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;  /* 1 cột trên mobile */
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;  /* 1 cột trên mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.35rem;
+  }
+
+  .hero__desc {
+    font-size: 0.9rem;
   }
 }
