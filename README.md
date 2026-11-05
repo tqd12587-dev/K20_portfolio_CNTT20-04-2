@@ -1,11 +1,11 @@
 # K20_portfolio_CNTT20-04-2
-# [Tên sản phẩm]
+# Tên sản phẩm: K20_portfolio_CNTT20-04-2
 ## Sản phẩm này là gì?
-[Một câu: website gì, dành cho ai]
+webside giới thiệu về bản thân
 ## Demo
-https://[tài-khoản].github.io/[tên-repo]/
+ https://tqd12587-dev.github.io/K20_portfolio_CNTT20-04-2/
 ## Tính năng
-- [Ví dụ: Bấm Dự án để xem 3 dự án học tập]
+- Bấm Dự án để xem 3 dự án học tập
 ## Cách mở
 1. Mở URL ở mục Demo.
 2. [Bấm … để xem …]
@@ -14,6 +14,6 @@ index.html, css/, images/, docs/
 ## Đã kiểm tra
 Xem docs/evidence-index.md
 ## Hạn chế / Chưa kiểm tra
-- [Ví dụ: chưa thử trên iPhone]
+Chưa thử trên iPhone
 ## Khai báo AI
 Xem docs/AI_LOG.md
