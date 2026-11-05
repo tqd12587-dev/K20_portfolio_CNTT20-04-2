@@ -1,48 +1,45 @@
-@echo off
-setlocal EnableExtensions
+# Lịch sử chỉnh sửa
 
-if not exist ".git" (
-  echo [ERROR] Khong phai thu muc Git repository.
-  exit /b 1
-)
+## Phiên bản 16 - 2026-11-05
 
-set "VERSION=%~1"
-if "%VERSION%"=="" set "VERSION=Unreleased"
+- Commit `afaf24a`: phiên bản 16.
 
-for /f "delims=" %%D in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd"') do set "TODAY=%%D"
+## Phiên bản 15 - 2026-11-05
 
-set "RANGE="
-for /f "delims=" %%T in ('git describe --tags --abbrev^=0 2^>nul') do set "LAST_TAG=%%T"
-if defined LAST_TAG set "RANGE=%LAST_TAG%..HEAD"
+- Commit `12a6d95`: phiên bản 15.
 
-set "TEMP_FILE=%TEMP%\changelog_%RANDOM%.tmp"
->"%TEMP_FILE%" echo # Changelog
->>"%TEMP_FILE%" echo.
->>"%TEMP_FILE%" echo ## [%VERSION%] - %TODAY%
->>"%TEMP_FILE%" echo.
->>"%TEMP_FILE%" echo ### Changes
->>"%TEMP_FILE%" echo.
+## Phiên bản 14 - 2026-11-05
 
-set "HAS_CHANGES="
-for /f "delims=" %%C in ('git log --pretty^="- %%h %%s" %RANGE% 2^>nul') do (
-  >>"%TEMP_FILE%" echo %%C
-  set "HAS_CHANGES=1"
-)
-if not defined HAS_CHANGES >>"%TEMP_FILE%" echo - No commits found.
+- Commit `c8800ea`: phiên bản 14.
 
-if exist "CHANGELOG.md" (
-  for %%S in (CHANGELOG.md) do if %%~zS GTR 0 (
-    >>"%TEMP_FILE%" echo.
-    type "CHANGELOG.md" >>"%TEMP_FILE%"
-  )
-)
+## Phiên bản 13 - 2026-11-05
 
-move /y "%TEMP_FILE%" "CHANGELOG.md" >nul
-if errorlevel 1 (
-  echo [ERROR] Khong the ghi CHANGELOG.md.
-  exit /b 1
-)
+- Commit `bfff48a`: phiên bản 13.
 
-echo [OK] Da cap nhat CHANGELOG.md voi phien ban %VERSION%.
-endlocal
-exit /b 0
+## Phiên bản 12 - 2026-11-05
+
+- Commit `48fd28d`: phiên bản 12.
+
+## Hợp nhất nhánh - 2026-11-05
+
+- Commit `d7811c3`: hợp nhất `main` từ GitHub repository.
+
+## Phiên bản 11 - 2026-11-05
+
+- Commit `3c7c519`: phiên bản 11.
+
+## Cập nhật HTML và liên kết - 2026-11-05
+
+- Commit `d1d9b35`: sửa định dạng HTML và cập nhật liên kết.
+
+## Phiên bản 10 - 2026-11-05
+
+- Commit `42e93f5`: phiên bản 10.
+
+## Phiên bản 9 - 2026-11-05
+
+- Commit `706e5d6`: phiên bản 9.
+
+## Chưa commit
+
+- Đang chỉnh sửa tài liệu lịch sử thay đổi trong `CHANGELOG.md`.
